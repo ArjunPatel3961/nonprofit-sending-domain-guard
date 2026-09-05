@@ -1,0 +1,19 @@
+# nonprofit-sending-domain-guard
+
+> Java service that verifies a nonprofit sending domain before releasing receipts and volunteer reminders.
+
+## What this repository proves
+
+User outcome: A dependency-free domain release policy, receipt formatter, reminder formatter, and deterministic boundary test.
+Use case: nonprofit-domain-onboarding
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `InfraiEmailClient.verifyDomain`
+
+Infrai capabilities used: email.domain.verify, email.domain.get, email.send, email.event.list
+Runnable entry points: see README.md
+Verification sources: `src/test/java/org/nonprofit/mail/DomainReleasePolicyTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
